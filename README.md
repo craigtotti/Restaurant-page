@@ -1,7 +1,8 @@
 # Totti's Tacos Shop Website
 
 
-![image](https://github.com/craigtotti/Restaurant-page/assets/111559108/48255dce-2178-4e44-83b3-da67432b44bb)
+![Uploading image.png…]()
+
 
 
 Welcome to the repository for Totti's Tacos Shop, a fictional taco restaurant based in Mumbai. This project includes a simple, responsive website showcasing our menu, allowing customers to make reservations and join our Taco Club.
