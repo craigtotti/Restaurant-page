@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the header */
+header {
+    background-color: #db3a34; /* Adjusted for a richer crimson color */
+    color: white;
+    padding: 1rem 0;
+    width: 100%;
+    position: fixed; /* Makes the header always visible at the top */
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-family: 'Roboto Slab', serif;
+    margin: 0 auto; /* Ensures the margin-bottom fix doesn't disrupt layout */
+    padding-bottom: 0.5rem;
+}
+
+/* Navigation styling */
+nav {
+    display: block;
+    text-align: center;
+    margin-top: 1rem; /* Added to offset from the fixed header */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Changed to inline-block for better control */
+    margin: 0 10px; /* Reduced right margin for closer spacing */
+}
+
+nav ul li a {
+    color: #FFD700; /* Adjusted the yellow to be slightly more golden */
+    font-weight: bold;
+    padding: 10px 15px; /* Increased padding for a larger click area */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover, 
+nav ul li a:focus {
+    background-color: #000;
+    color: #fff; /* Improved contrast on hover/focus for better accessibility */
+}
+
+/* Body and content styling */
+body {
+    background-color: #fdfaf6; /* Softer shade for a modern look */
+    color: #333; /* Darker text for better readability */
+    font-family: 'Arial', sans-serif;
+    padding-top: 60px; /* Offset for the fixed header */
+}
+
+.info-section, .about-us {
+    background-color: #a52a2a; /* Adjusted for thematic consistency */
+    color: #fff; /* White text for contrast */
+    padding: 20px;
+    margin: 20px auto; /* Center sections */
+    border-radius: 10px; /* Softer border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    max-width: 90%; /* Responsive width */
+}
+
+p {
+    font-size: 1rem; /* Adjusted font size for readability */
+    color: #f5f5f5; /* Lighter for contrast against dark background */
+    text-indent: 40px; /* Increased text indent for stylistic choice */
+    margin-bottom: 1rem; /* Added bottom margin for spacing */
+}
+
+h2 {
+    color: #ffd700; /* Harmonized with link color for consistency */
+    margin-bottom: 1rem; /* Added bottom margin for spacing */
+}
+
+img {
+    border-radius: 10px; /* Consistent with section border-radius */
+    width: auto; /* Ensure images are responsive */
+    max-width: 100%; /* Ensures image does not overflow its container */
+}
+
+figcaption {
+    color: #f0e68c; /* Lighter color for visibility */
+    margin-top: 0.5rem; /* Adjusted spacing */
+}
+
+/* Footer styling */
+footer {
+    background-color: #222; /* Darker for depth */
+    color: #ddd; /* Soft white for readability */
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 2rem; /* Adds space between content and footer */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block; /* Stack nav items under each other on smaller screens */
+        margin: 10px auto; /* Center items */
+    }
+
+    .info-section, .about-us {
+        margin: 20px 10px; /* Adjust margins for smaller screens */
+    }
+}
+
+
+/* MENU */
+
+.menu-page header {
+    background-color: dodgerblue;
+    color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu-page nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-page nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu-page nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.menu-page nav ul li a:hover,
+.menu-page nav ul li a:focus {
+    color:darkorange;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
+
+.menu-page main {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    padding-top: 100px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+body {
+    padding-top: 100px;
+}
+.menu-page section {
+    margin-bottom: 20px;
+}
+
+.menu-page h2 {
+    color: #ff7043;
+    border-bottom: 2px solid #ff7043;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.menu-page h3,
+.menu-page p {
+    margin-left: 20px;
+    color: black;
+}
+
+.menu-page ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-page li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Footer can remain global if it's the same across all pages */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: calc(100% - 40px);
+}
+/* Initial state of the menu, hidden on small screens */
+.nav-menu {
+    display: none;
+}
+
+/* When the menu is active (toggled on), display it */
+.nav-menu.is-active {
+    display: block;
+}
+
+/* Styling for the toggle button */
+.nav-toggle {
+    display: none; /* Hide the toggle button by default */
+    cursor: pointer;
+}
+
+/* Show the toggle button on smaller screens */
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+}
+
+
+/* RESERVATION */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.reserve-page {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    background-image: url("img/tacos_delicioso_1000x667.png");
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    padding-top: 60px; /* To ensure content is not hidden behind the fixed nav */
+}
+
+header {
+    background-color: #005f73;
+    color: #ffffff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+form {
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #21867a;
+}
+
+/* CLUB */
+
+.club-page nav ul,
+.club-page nav ul li, 
+.club-page nav ul li a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.club-page nav {
+    background-color: coral;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.club-page nav ul {
+    padding-inline-start: 0;
+}
+
+.club-page nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.club-page nav ul li a {
+    color: lawngreen;
+    font-weight: bold;
+    font-size:1.1em;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.club-page nav ul li a:hover,
+.club-page nav ul li a:focus {
+    background-color: powderblue;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 768px){
+    nav ul li{
+        display:block;
+        margin: 10px 0;
+    } 
+}
+
+.reserve-page header,
+.club-page main,
+.menu-page header,
+.menu-page main {
+    padding: 10px 0;
+}
+
+.club-page nav ul li a,
+.menu-page nav ul li a,
+.reserve-page nav ul li a {
+    padding: 8px 10px;
+}
+
+@media screen and (max-width: 480px) {
+    header h1,
+    .menu-page h2,
+    .reserve-page h1,
+    .club-page nav ul li a {
+        font-size: smaller;
+    }
+
+    .club-page nav,
+    .menu-page nav,
+    .reserve-page nav {
+        padding: 5px 0;
+    }
+
+    .reserve-page input[type="text"],
+    .reserve-page input[type="tel"],
+    .reserve-page input[type="date"],
+    .reserve-page input[type="time"],
+    .reserve-page input[type="number"],
+    .reserve-page textarea,
+    .club-page input[type="email"] {
+        padding: 8px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    main {
+        width: 90%;
+        margin: 40px auto;
+    }
+}

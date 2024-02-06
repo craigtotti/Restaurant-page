@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Join Our Taco Club</title>
+</head>
+<body class="club-page">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="club.html">Join Our Taco Club</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="taco-club" style="position: relative; text-align: center; color: gold; font-size: 1.5rem;">
+        <img src="img/tacos_close_up_1000x649.png" alt="Delicious Tacos" style="width: 100%; height: auto;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; padding: 1em;">
+            <h2>Join Our Taco Club</h2>
+            <p>Sign up to receive exclusive taco deals, news, and recipes!</p>
+            <form action="subscribe_to_club.php" method="POST" style="display: inline-block; background: rgba(0, 0, 0, 0.7); padding: 2em; border-radius: 10px;">
+                <label for="email" style="display: block; margin-bottom: 0.5em;">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required style="margin-bottom: 1em;">
+                <button type="submit" style="display: block; background-color: #ffcc00; color: black; padding: 0.5em 1em; border: none; border-radius: 5px;">Sign Up</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
